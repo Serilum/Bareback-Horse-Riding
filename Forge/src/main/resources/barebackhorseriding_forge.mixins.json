@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.natamus.barebackhorseriding.forge.mixin",
+  "plugin": "com.natamus.collective.forge.mixin.plugin.ForgeMixinConfigPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "barebackhorseriding_forge.refmap.json",
+  "mixins": [
+    "AbstractHorseMixin"
+  ],
+  "client": [
+    "HorseModelMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
