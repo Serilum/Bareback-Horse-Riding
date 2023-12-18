@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="*"
 license="All rights reserved"
-issueTrackerURL="https://github.com/ricksouth/serilum-mc-mods/labels/Mod:%20Bareback%20Horse%20Riding"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Bareback%20Horse%20Riding"
 logoFile="icon.png"
 
 [[mods]]
 modId="barebackhorseriding"
-version="1.0"
+version="1.2"
 displayName="Bareback Horse Riding"
-displayURL="https://curseforge.com/minecraft/mc-mods/bareback-horse-riding"
+displayURL="https://serilum.com/mod/bareback-horse-riding"
 authors="Rick South"
 description='''Allows riding horses without a saddle, while wearing leather pants, to prevent damage.
 '''
@@ -21,13 +21,15 @@ If you would like to contribute too, check out https://ricksouth.com/donate. App
 
 [[dependencies.barebackhorseriding]]
     modId="collective"
+    type="required"
     mandatory=true
-    versionRange="[7.15,)"
+    versionRange="[7.22,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.barebackhorseriding]]
     modId="minecraft"
+    type="required"
     mandatory=true
     versionRange="[1.20.2]"
     ordering="NONE"
