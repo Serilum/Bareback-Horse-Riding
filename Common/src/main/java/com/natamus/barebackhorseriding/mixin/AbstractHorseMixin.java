@@ -1,4 +1,4 @@
-package com.natamus.barebackhorseriding.forge.mixin;
+package com.natamus.barebackhorseriding.mixin;
 
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import org.spongepowered.asm.mixin.Mixin;
