@@ -1,4 +1,4 @@
-package com.natamus.barebackhorseriding.fabric.mixin;
+package com.natamus.barebackhorseriding.mixin;
 
 import com.natamus.barebackhorseriding.util.Util;
 import net.minecraft.client.model.HorseModel;
