@@ -9,14 +9,9 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.item.DyeableArmorItem;
-import net.minecraft.world.item.ItemStack;
 
 public class RidingEvent {
 	public static void onPlayerTick(ServerLevel level, ServerPlayer player) {
-		if (!ConfigHandler.shouldDamageDuringRidingWithoutSaddle) {
-			return;
-		}
-
 		if (!player.isPassenger()) {
 			return;
 		}
@@ -39,20 +34,31 @@ public class RidingEvent {
 			return;
 		}
 
-		if (player.tickCount % ConfigHandler.ticksBetweenDamage != 0) {
-			return;
-		}
+		boolean wearingLeatherPants = player.getItemBySlot(EquipmentSlot.LEGS).getItem() instanceof DyeableArmorItem;
 
-		if (ConfigHandler.leatherPantsNegateDamage) {
-			ItemStack leggingsStack = player.getItemBySlot(EquipmentSlot.LEGS);
-			if (leggingsStack.getItem() instanceof DyeableArmorItem) {
-				if (ConfigHandler.leatherPantsLoseDurabilityOnNegation) {
-					ItemFunctions.itemHurtBreakAndEvent(leggingsStack, player, null, 1);
+		if (ConfigHandler.shouldReceiveSlownessDuringRidingWithoutSaddle) {
+			if (player.tickCount % 20 == 0) {
+				if (ConfigHandler.leatherPantsNegateEffect && wearingLeatherPants) {
+					if (ConfigHandler.leatherPantsLoseDurabilityOnNegation) {
+						ItemFunctions.itemHurtBreakAndEvent(player.getItemBySlot(EquipmentSlot.LEGS), player, null, 1);
+					}
+					return;
 				}
-				return;
+
+				Util.giveSlowness(player);
 			}
 		}
+		if (ConfigHandler.shouldDamageDuringRidingWithoutSaddle) {
+			if (player.tickCount % ConfigHandler.ticksBetweenDamage == 0) {
+				if (ConfigHandler.leatherPantsNegateEffect && wearingLeatherPants) {
+					if (ConfigHandler.leatherPantsLoseDurabilityOnNegation) {
+						ItemFunctions.itemHurtBreakAndEvent(player.getItemBySlot(EquipmentSlot.LEGS), player, null, 1);
+					}
+					return;
+				}
 
-		Util.damagePlayer(player, ConfigHandler.halfHeartDamageAmount);
+				Util.damagePlayer(player, ConfigHandler.halfHeartDamageAmount);
+			}
+		}
 	}
 }
