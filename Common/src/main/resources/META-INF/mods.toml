@@ -6,7 +6,7 @@ logoFile="icon.png"
 
 [[mods]]
 modId="barebackhorseriding"
-version="2.0"
+version="2.1"
 displayName="Bareback Horse Riding"
 displayURL="https://serilum.com/mod/bareback-horse-riding"
 authors="Rick South"
@@ -22,7 +22,7 @@ If you would like to contribute too, check out https://serilum.com/donate. Appre
 [[dependencies.barebackhorseriding]]
     modId="collective"
     mandatory=true
-    versionRange="[7.53,)"
+    versionRange="[7.54,)"
     ordering="NONE"
     side="BOTH"
 
