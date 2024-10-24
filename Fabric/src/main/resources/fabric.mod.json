@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "barebackhorseriding",
+  "version": "2.2",
+
+  "name": "Bareback Horse Riding",
+  "description": "Allows riding horses without a saddle, while wearing leather pants, to prevent slowness and/or damage.",
+  "authors": [ "Rick South" ],
+  "contact": {
+    "homepage": "https://serilum.com/mod/bareback-horse-riding",
+    "sources": "https://github.com/Serilum/Bareback-Horse-Riding",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Bareback%20Horse%20Riding"
+  },
+
+  "license": "All Right Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": { "main": [ "com.natamus.barebackhorseriding.ModFabric" ], "modmenu": [ "com.natamus.barebackhorseriding.fabric.config.IntegrateModMenu" ] },
+  "mixins": [
+    "barebackhorseriding.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric": "*",
+    "minecraft": ">=1.21",
+    "java": ">=21",
+    "collective": ">=7.88"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Donate <3" : "https://ricksouth.com/donate"
+      }
+    }
+  },
+
+  "contributors": [
+	  " ",
+	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
+	  " ",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  " ",
+	  "Membership sponsors:",
+	  " Alister",
+	  " Andrean Olgo",
+	  " aternosorg",
+	  " Cherriesaurus",
+	  " kate1073",
+	  " Michael W. S.",
+	  " Tyler Behl",
+	  " XAgent"
+  ]
+}
