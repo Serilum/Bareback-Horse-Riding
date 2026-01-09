@@ -9,6 +9,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
+import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -24,17 +25,33 @@ public class RidingEvent {
 		}
 
 		Entity vehicleEntity = player.getVehicle();
-		if (!(vehicleEntity instanceof AbstractHorse abstractHorse)) {
-			return;
+
+		AbstractHorse abstractHorse = null;
+		Pig pig = null;
+
+		if (vehicleEntity instanceof AbstractHorse ah) {
+    		abstractHorse = ah;
+		}
+		else if (vehicleEntity instanceof Pig p) {
+    		pig = p;
+		}
+		else {
+    		return;
 		}
 
-        if (!abstractHorse.isTamed()) {
-			return;
+        // 馬の場合のみチェック
+		if (abstractHorse != null) {
+    		if (!abstractHorse.isTamed()) {
+        		return;
+    		}
+
+    		if (Util.isActuallyWearingASaddle(abstractHorse)) {
+        		return;
+    		}
 		}
 
-		if (Util.isActuallyWearingASaddle(abstractHorse)) {
-			return;
-		}
+		// 豚の場合はここを通過（常にサドルなし扱い）
+
 
 		ItemStack legsStack = player.getItemBySlot(EquipmentSlot.LEGS);
 		Item legsItem = legsStack.getItem();
