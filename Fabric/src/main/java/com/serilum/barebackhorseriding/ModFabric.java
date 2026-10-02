@@ -1,10 +1,10 @@
-package com.natamus.barebackhorseriding;
+package com.serilum.barebackhorseriding;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.collective.fabric.callbacks.CollectivePlayerEvents;
-import com.natamus.barebackhorseriding.events.RidingEvent;
-import com.natamus.barebackhorseriding.util.Reference;
+import com.serilum.barebackhorseriding.events.RidingEvent;
+import com.serilum.barebackhorseriding.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;

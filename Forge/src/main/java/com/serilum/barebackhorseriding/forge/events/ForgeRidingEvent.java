@@ -1,6 +1,6 @@
-package com.natamus.barebackhorseriding.forge.events;
+package com.serilum.barebackhorseriding.forge.events;
 
-import com.natamus.barebackhorseriding.events.RidingEvent;
+import com.serilum.barebackhorseriding.events.RidingEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;

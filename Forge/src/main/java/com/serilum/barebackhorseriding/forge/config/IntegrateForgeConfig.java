@@ -1,7 +1,7 @@
-package com.natamus.barebackhorseriding.forge.config;
+package com.serilum.barebackhorseriding.forge.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.barebackhorseriding.util.Reference;
+import com.serilum.barebackhorseriding.util.Reference;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 

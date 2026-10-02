@@ -1,6 +1,6 @@
-package com.natamus.barebackhorseriding.mixin;
+package com.serilum.barebackhorseriding.mixin;
 
-import com.natamus.barebackhorseriding.util.Util;
+import com.serilum.barebackhorseriding.util.Util;
 import net.minecraft.client.model.HorseModel;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import org.spongepowered.asm.mixin.Mixin;

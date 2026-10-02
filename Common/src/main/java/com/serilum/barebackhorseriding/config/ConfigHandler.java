@@ -1,7 +1,7 @@
-package com.natamus.barebackhorseriding.config;
+package com.serilum.barebackhorseriding.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.barebackhorseriding.util.Reference;
+import com.serilum.barebackhorseriding.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;

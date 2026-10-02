@@ -1,4 +1,4 @@
-package com.natamus.barebackhorseriding.util;
+package com.serilum.barebackhorseriding.util;
 
 import com.natamus.collective.functions.EntityFunctions;
 import net.minecraft.world.effect.MobEffectInstance;

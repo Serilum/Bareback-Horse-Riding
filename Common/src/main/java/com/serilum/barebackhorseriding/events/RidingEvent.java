@@ -1,7 +1,7 @@
-package com.natamus.barebackhorseriding.events;
+package com.serilum.barebackhorseriding.events;
 
-import com.natamus.barebackhorseriding.config.ConfigHandler;
-import com.natamus.barebackhorseriding.util.Util;
+import com.serilum.barebackhorseriding.config.ConfigHandler;
+import com.serilum.barebackhorseriding.util.Util;
 import com.natamus.collective.functions.ItemFunctions;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;

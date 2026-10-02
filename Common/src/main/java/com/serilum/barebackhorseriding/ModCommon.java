@@ -1,6 +1,6 @@
-package com.natamus.barebackhorseriding;
+package com.serilum.barebackhorseriding;
 
-import com.natamus.barebackhorseriding.config.ConfigHandler;
+import com.serilum.barebackhorseriding.config.ConfigHandler;
 
 public class ModCommon {
 
