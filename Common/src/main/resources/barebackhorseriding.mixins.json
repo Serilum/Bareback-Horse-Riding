@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.barebackhorseriding.mixin",
+  "package": "com.serilum.barebackhorseriding.mixin",
   "compatibilityLevel": "JAVA_25",
   "mixins": [
     "MobMixin"
